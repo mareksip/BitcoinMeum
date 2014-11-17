@@ -1,0 +1,150 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="BitcoinMeum.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot" 
+          Background="{Binding Path=LocalizedResources.ApplicationBackcolor,
+                Source={StaticResource LocalizedStrings}}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <Image Name="ImgTitle" Source="Assets/Pictures/Logo/logo-blue.png" 
+                        		Height="60" Width="60" HorizontalAlignment="Left"
+                   Margin="12,0"
+                   />
+
+            <TextBlock Text="{Binding Path=LocalizedResources.SettingsTitle,
+                       Source={StaticResource LocalizedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       Margin="82,-55"
+                       FontSize="35"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                       />
+        </StackPanel>
+
+        <phone:Panorama 
+                Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                Margin="12,100,0,2"
+                       
+                        >
+
+            <!--Panorama item one-->
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.SettingsLiveTile, 
+                Source={StaticResource LocalizedStrings}}" Height="818">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                        
+                        <StackPanel Orientation="Vertical" 
+                                    Name="PeriodicStackPanel"
+                                    Grid.ColumnSpan="2">
+                        <toolkit:ToggleSwitch
+                            
+                            Name="TileSwitch"
+                            
+                            Content="{Binding Path=LocalizedResources.TileEnableText,
+                Source={StaticResource LocalizedStrings}}"
+                         
+                            Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                            Background="{Binding Path=LocalizedResources.ApplicationBackcolor,
+                Source={StaticResource LocalizedStrings}}"
+                            SwitchForeground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                            Unchecked="tileSwitch_Unchecked"
+                            Checked="tileSwitch_Checked"
+                              
+                            ></toolkit:ToggleSwitch>
+                       
+                        </StackPanel>
+                    <StackPanel Name="SpLiveTileSettings"
+                                Grid.Row="1"
+                                Grid.RowSpan="3"
+                                Grid.ColumnSpan="2"
+                                >
+                        <TextBlock
+                            Text="{Binding Path=LocalizedResources.TileLastBitstampText,
+                Source={StaticResource LocalizedStrings}}"
+                           TextWrapping="Wrap">
+                       
+                        </TextBlock>
+                        <CheckBox
+                           
+                            Content="{Binding Path=LocalizedResources.TileBalanceInstead,
+                Source={StaticResource LocalizedStrings}}"
+                            Name="CbShowBalance"
+                            Click="CbShowBalance_Click"
+                              Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+               BorderBrush="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+              
+                            ></CheckBox>
+                    </StackPanel>
+                    <TextBlock
+                       Grid.Row="2"
+                       FontSize="30"
+                       Text="Bitcoin unit"
+                        VerticalAlignment="Center"
+                        ></TextBlock>
+                    <toolkit:ListPicker Grid.Row="2" 
+                                        Grid.Column="1"
+                                        VerticalAlignment="Center"
+                                        Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                                         BorderBrush="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                                        Visibility="Collapsed"
+                                        ExpansionMode="FullScreenOnly"
+                                        >
+                        <toolkit:ListPickerItem Content="BTC" />
+                        <toolkit:ListPickerItem Content="cBTC" />
+                        <toolkit:ListPickerItem Content="mBTC" />
+                        <toolkit:ListPickerItem Content="μBTC" />
+                        <toolkit:ListPickerItem Content="Bits" />
+                        <toolkit:ListPickerItem Content="Satoshi" />
+                    </toolkit:ListPicker>
+                </Grid>
+              
+
+            </phone:PanoramaItem>
+
+
+            <!--Panorama item two-->
+            <phone:PanoramaItem Header="wallet security">
+               
+            </phone:PanoramaItem>
+        </phone:Panorama>
+    </Grid>
+
+</phone:PhoneApplicationPage>

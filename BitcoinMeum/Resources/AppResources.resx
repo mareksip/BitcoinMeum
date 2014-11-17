@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>en-US</value>
+    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>BITCOIN MEUM</value>
+  </data>
+  <data name="AppBarButtonText" xml:space="preserve">
+    <value>add</value>
+  </data>
+  <data name="AppBarMenuItemText" xml:space="preserve">
+    <value>Menu Item</value>
+  </data>
+  <data name="AboutAuthorText" xml:space="preserve">
+    <value>Author:</value>
+  </data>
+  <data name="AboutButtonCopyAddress" xml:space="preserve">
+    <value>Copy to clipboard</value>
+  </data>
+  <data name="AboutEmailText" xml:space="preserve">
+    <value>Contact:</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>ABOUT</value>
+  </data>
+  <data name="AboutVersionDescriptionText" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="AboutVersionText" xml:space="preserve">
+    <value>Version:</value>
+  </data>
+  <data name="DonateAddress" xml:space="preserve">
+    <value>1KAqjkCjQiWYnpjmNWWb7zsDGJEFLVbUDQ</value>
+  </data>
+  <data name="DonateAddressText" xml:space="preserve">
+    <value>Donation:</value>
+  </data>
+  <data name="HomeTitle" xml:space="preserve">
+    <value>HOME</value>
+  </data>
+  <data name="WalletGeneratorTitleRef" xml:space="preserve">
+    <value>Wallet generator</value>
+  </data>
+  <data name="WalletGeneratorTitle" xml:space="preserve">
+    <value>wallet generator</value>
+  </data>
+  <data name="BalanceScannerTitle" xml:space="preserve">
+    <value>BALANCE SCAN</value>
+  </data>
+  <data name="BalanceScannerTitleRef" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="MWBalanceTitle" xml:space="preserve">
+    <value>balance</value>
+  </data>
+  <data name="MWRefreshBalance" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="MWTransactionAmount" xml:space="preserve">
+    <value>BTC:</value>
+  </data>
+  <data name="MWRequestTitle" xml:space="preserve">
+    <value>request</value>
+  </data>
+  <data name="MWSendTitle" xml:space="preserve">
+    <value>send</value>
+  </data>
+  <data name="MWSettings" xml:space="preserve">
+    <value>WALLET SETTINGS</value>
+  </data>
+  <data name="MWSettingsRef" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="MyWalletTitle" xml:space="preserve">
+    <value>MY WALLET</value>
+  </data>
+  <data name="MyWalletTitleRef" xml:space="preserve">
+    <value>My wallet</value>
+  </data>
+  <data name="BalanceRefreshFailed" xml:space="preserve">
+    <value>Couldn't refresh wallet balance. Please set your wallet. My wallet &gt; Settings.</value>
+  </data>
+  <data name="BalanceRefreshFailedConnection" xml:space="preserve">
+    <value>Couldn't refresh wallet balance. Please check your internet connection.</value>
+  </data>
+  <data name="CoinDesk" xml:space="preserve">
+    <value>CoinDesk</value>
+  </data>
+  <data name="MarketsTitle" xml:space="preserve">
+    <value>MARKETS</value>
+  </data>
+  <data name="MarketsTitleRef" xml:space="preserve">
+    <value>Markets</value>
+  </data>
+  <data name="MWInvalidRequestAmount" xml:space="preserve">
+    <value>Invalid amount!</value>
+  </data>
+  <data name="MWTransactionsTitle" xml:space="preserve">
+    <value>transactions</value>
+  </data>
+  <data name="NewsTitle" xml:space="preserve">
+    <value>NEWS</value>
+  </data>
+  <data name="NewsTitleRef" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="rBitcoin" xml:space="preserve">
+    <value>r/Bitcoin</value>
+  </data>
+  <data name="RSSReadMore" xml:space="preserve">
+    <value>read more ...</value>
+  </data>
+  <data name="ApplicationBackcolor" xml:space="preserve">
+    <value>#2f2f2f</value>
+    <comment>#d5d5d5</comment>
+  </data>
+  <data name="ApplicationPlainTextColor" xml:space="preserve">
+    <value>white</value>
+  </data>
+  <data name="ApplicationTileBackcolor" xml:space="preserve">
+    <value>#0071C5</value>
+  </data>
+  <data name="ApplicationTileBordercolor" xml:space="preserve">
+    <value>#0071C5</value>
+  </data>
+  <data name="ApplicationTileTextcolor" xml:space="preserve">
+    <value>white</value>
+  </data>
+  <data name="ApplicationTitleTextColor" xml:space="preserve">
+    <value>#0071C5</value>
+  </data>
+  <data name="BitcoinGuideTitle" xml:space="preserve">
+    <value>BITCOIN GUIDE</value>
+  </data>
+  <data name="BitcoinGuideTitleRef" xml:space="preserve">
+    <value>Bitcoin guide</value>
+  </data>
+  <data name="MWSPrivate" xml:space="preserve">
+    <value>Private key</value>
+  </data>
+  <data name="MWSPublic" xml:space="preserve">
+    <value>Public key</value>
+  </data>
+  <data name="WalletBalanceText" xml:space="preserve">
+    <value>BTC:</value>
+  </data>
+  <data name="WalletTransactionCountText" xml:space="preserve">
+    <value>Transactions:</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="WalletTotalReceivedText" xml:space="preserve">
+    <value>Total received:</value>
+  </data>
+  <data name="WalletTotalSentText" xml:space="preserve">
+    <value>Total sent:</value>
+  </data>
+  <data name="WalletBalanceUSD" xml:space="preserve">
+    <value>USD:</value>
+  </data>
+  <data name="WalletCreateRequestQRText" xml:space="preserve">
+    <value>Show QR</value>
+  </data>
+  <data name="AvailableSoon" xml:space="preserve">
+    <value>This option will be available soon.</value>
+  </data>
+  <data name="MarketsBitstampTitle" xml:space="preserve">
+    <value>bistamp</value>
+  </data>
+  <data name="MarketsBtceTitle" xml:space="preserve">
+    <value>btc-e</value>
+  </data>
+  <data name="PublicKeyWalletDescription" xml:space="preserve">
+    <value>This option enables users to add watch-only bitcoin address by entering it's public key.
+As a result you can keep track of wallet transactions, current balance and receive bitcoins via QR.</value>
+  </data>
+  <data name="RatesDayHigh" xml:space="preserve">
+    <value>High:</value>
+  </data>
+  <data name="RatesDayLow" xml:space="preserve">
+    <value>Low:</value>
+  </data>
+  <data name="RatesDayVolume" xml:space="preserve">
+    <value>Volume:</value>
+  </data>
+  <data name="RatesLast" xml:space="preserve">
+    <value>Last:</value>
+  </data>
+  <data name="RatesTimestamp" xml:space="preserve">
+    <value>Updated:</value>
+  </data>
+  <data name="WelcomeGoToBitcoinBasics" xml:space="preserve">
+    <value>BITCOIN BASICS</value>
+  </data>
+  <data name="WelcomeGoToMenu" xml:space="preserve">
+    <value>MAIN MENU</value>
+  </data>
+  <data name="WelcomeText" xml:space="preserve">
+    <value>Welcome to Bitcoin Meum!</value>
+  </data>
+  <data name="WelcomeTourText" xml:space="preserve">
+    <value>Do you wish to take a tour through bitcoin basics?</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SettingsLiveTile" xml:space="preserve">
+    <value>live tile</value>
+  </data>
+  <data name="TileBalanceInstead" xml:space="preserve">
+    <value>Wallet balance instead (Medium)</value>
+  </data>
+  <data name="TileEnableText" xml:space="preserve">
+    <value>Enable live tile</value>
+  </data>
+  <data name="TileLastBitstampText" xml:space="preserve">
+    <value>Last Bitstamp price will be updated every 30 seconds</value>
+  </data>
+  <data name="MWTransactionMessage" xml:space="preserve">
+    <value>Message:</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>SETTINGS</value>
+  </data>
+  <data name="UIButtonFontSize" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="UIRegularTextSize" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="UISmallTextSize" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="UITextBoxFontSize" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="Q1" xml:space="preserve">
+    <value>Bitcoin is still an experiment.</value>
+  </data>
+  <data name="Q2" xml:space="preserve">
+    <value>You don't own bitcoins if you don't have the private keys.</value>
+  </data>
+  <data name="Q3" xml:space="preserve">
+    <value>Always backup your wallet.</value>
+  </data>
+  <data name="Q4" xml:space="preserve">
+    <value>Bitcoin is a protocol, not a currency. Currency is just the first app. </value>
+  </data>
+  <data name="Q5" xml:space="preserve">
+    <value>More information at www.bitcoin.org</value>
+  </data>
+  <data name="Q6" xml:space="preserve">
+    <value>Financial renaissance.</value>
+  </data>
+  <data name="Q7" xml:space="preserve">
+    <value>Thank you, Satoshi and bitcoin core devs.</value>
+  </data>
+  <data name="Q8" xml:space="preserve">
+    <value>Do you even hodl? :)</value>
+  </data>
+  <data name="MWSendAmount" xml:space="preserve">
+    <value>Amount:</value>
+  </data>
+  <data name="MWSendAmountError" xml:space="preserve">
+    <value>Invalid amount!</value>
+  </data>
+  <data name="MWSendBlockchainResponse" xml:space="preserve">
+    <value>Blockchain response:</value>
+  </data>
+  <data name="MWSendButton" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="MWSendCancel" xml:space="preserve">
+    <value>Transaction has been canceled!</value>
+  </data>
+  <data name="MWSendFee" xml:space="preserve">
+    <value>Fee (≥0.0001)</value>
+  </data>
+  <data name="MWSendMessage" xml:space="preserve">
+    <value>Message:</value>
+  </data>
+  <data name="MWSendPrivateKeyError" xml:space="preserve">
+    <value>Private key has not been entered!</value>
+  </data>
+  <data name="MWSendRecipientError" xml:space="preserve">
+    <value>Invalid recipient address!</value>
+  </data>
+  <data name="MWSendTo" xml:space="preserve">
+    <value>To:</value>
+  </data>
+  <data name="PrivateKeyWalletDescription" xml:space="preserve">
+    <value>Entering valid Private key enables user option to send bitcoins via Blockchain API.</value>
+  </data>
+</root>

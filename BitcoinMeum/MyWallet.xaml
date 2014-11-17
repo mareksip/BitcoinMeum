@@ -1,0 +1,498 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="BitcoinMeum.MyWallet"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+     shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot" 
+          Background="{Binding Path=LocalizedResources.ApplicationBackcolor,
+                Source={StaticResource LocalizedStrings}}">
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+
+            <Image Name="ImgTitle" Source="Assets/Pictures/Logo/logo-blue.png" 
+                        		Height="60" Width="60" HorizontalAlignment="Left"
+                   Margin="12,0"
+                   />
+
+            <TextBlock Text="{Binding Path=LocalizedResources.MyWalletTitle,
+                       Source={StaticResource LocalizedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       Margin="82,-55"
+                       FontSize="35"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                       />
+        </StackPanel>
+
+        <phone:Panorama 
+            Name="panorama"
+                Margin="20,70,0,0"
+                Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+            Grid.Row="0" Grid.RowSpan="2"
+                        >
+
+            <!-- Wallet balance -->
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.MWBalanceTitle, 
+                Source={StaticResource LocalizedStrings}}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <ProgressBar Width="500" 
+                                 Height="20" 
+                                 Grid.Row="7"
+                                 Grid.ColumnSpan="4"
+                                 IsIndeterminate="True"       
+                                 Name="ProgressBar" 
+                                 Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                         ></ProgressBar>
+                    <TextBlock Name="TbPublicFirstPart"
+                               Grid.Column="0"
+                               Grid.Row="0"
+                               Grid.ColumnSpan="4"
+                               FontSize="40"
+                               TextAlignment="Center"
+                               Foreground="#00a6ea"
+                               FontWeight="Bold"
+                               ></TextBlock>
+                    <TextBlock Name="TbWalletBalanceText"
+                               Text="{Binding Path=LocalizedResources.WalletBalanceText, 
+                Source={StaticResource LocalizedStrings}}"
+                               FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="4"
+                               Grid.ColumnSpan="2" Grid.Column="0"
+                               Grid.RowSpan="2"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               >
+
+                    </TextBlock>
+                    <TextBlock Name="TbWalletBalance"
+                               FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="4"
+                               Grid.RowSpan="2"
+                               Grid.ColumnSpan="2"
+                               Grid.Column="2"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               ></TextBlock>
+
+                    <TextBlock Name="TbWalletBalanceUsdText"
+                               Text="{Binding Path=LocalizedResources.WalletBalanceUSD, 
+                Source={StaticResource LocalizedStrings}}"
+                               FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="5"
+                               Grid.ColumnSpan="2" Grid.Column="0"
+                               Grid.RowSpan="3"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               >
+
+                    </TextBlock>
+                    <TextBlock Name="TbWalletBalanceUsd"
+                               FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="5"
+                               Grid.ColumnSpan="2"
+                               Grid.RowSpan="3"
+                               Grid.Column="2"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               ></TextBlock>
+
+                    <TextBlock Name="TbTransactionCountText"
+                               Text="{Binding Path=LocalizedResources.WalletTransactionCountText, 
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="1"
+                               Grid.ColumnSpan="2" Grid.Column="0"
+                               FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               ></TextBlock>
+                    <TextBlock Name="TbTransactionCount"
+                               Grid.Row="1"
+                               Grid.Column="2"
+                               Grid.ColumnSpan="2"
+                               FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               ></TextBlock>
+                    <TextBlock Name="TbTotalReceivedText"
+                               Text="{Binding Path=LocalizedResources.WalletTotalReceivedText, 
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="2"
+                               Grid.ColumnSpan="2" Grid.Column="0"
+                               FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               ></TextBlock>
+                    <TextBlock Name="TbTotalReceived"
+                               Grid.Row="2"
+                               Grid.ColumnSpan="2"
+                               Grid.Column="2"
+                               FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               ></TextBlock>
+                    <TextBlock Name="TbTotalSentText"
+                               Text="{Binding Path=LocalizedResources.WalletTotalSentText, 
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.Row="3"
+                               Grid.ColumnSpan="2" Grid.Column="0"
+                               FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               ></TextBlock>
+                    <TextBlock Name="TbTotalSent"
+                               Grid.Row="3"
+                               Grid.ColumnSpan="2"
+                               Grid.Column="2"
+                               FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               ></TextBlock>
+
+                   
+                </Grid>
+            </phone:PanoramaItem>
+
+            <!-- Request payment -->
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.MWRequestTitle, 
+                Source={StaticResource LocalizedStrings}}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="120*"></RowDefinition>
+                        <RowDefinition Height="120*"></RowDefinition>
+                        <RowDefinition Height="120*"></RowDefinition>
+                        <RowDefinition Height="371*"/>
+                        
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"
+                               FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Path=LocalizedResources.MWTransactionAmount, 
+                Source={StaticResource LocalizedStrings}}"
+                               VerticalAlignment="Center"
+                               ></TextBlock>
+                    
+                    <TextBox Grid.Row="0"
+                             Grid.ColumnSpan="2" Grid.Column="2"
+                             Name="TbTransactionAmount"
+                             FontSize="{Binding Path=LocalizedResources.UITextBoxFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                             Margin="0,0,0,0">
+
+                    </TextBox>
+
+                    <TextBlock Grid.Row="1"
+                               FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                               Grid.ColumnSpan="2" Grid.Column="0"
+                               Text="{Binding Path=LocalizedResources.MWTransactionMessage, 
+                Source={StaticResource LocalizedStrings}}"
+                               VerticalAlignment="Center"
+                               ></TextBlock>
+
+                    <TextBox Grid.Row="1"
+                             Grid.ColumnSpan="2" Grid.Column="2"
+                             Name="TbTransactionMessage"
+                             FontSize="{Binding Path=LocalizedResources.UITextBoxFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                             >
+
+                    </TextBox>
+
+                    <Button Name="BtnRefreshQr" 
+                            Content="{Binding Path=LocalizedResources.WalletCreateRequestQRText,
+                Source={StaticResource LocalizedStrings}}"
+                            Grid.Row="2" 
+                            Grid.Column="2"
+                            Grid.ColumnSpan="2"
+                            Click="BtnRefreshRequsetQR_Click"      
+                            Foreground="{Binding Path=LocalizedResources.ApplicationTileTextcolor,
+                Source={StaticResource LocalizedStrings}}"
+                            Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                            BorderBrush="{Binding Path=LocalizedResources.ApplicationTileBordercolor,
+                Source={StaticResource LocalizedStrings}}" 
+                            FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                            >
+                    </Button>
+                    <Image Name="ImgRequestQr" 
+                           Grid.Row="3"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="4"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center" 
+                           
+                           />
+                </Grid>
+            </phone:PanoramaItem>
+            <!-- SEND payment -->
+            <phone:PanoramaItem Header="{Binding Path=LocalizedResources.MWSendTitle, 
+                Source={StaticResource LocalizedStrings}}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Name="BtnScanRecipient" 
+                            Grid.Row="1" 
+                            Grid.Column="0"
+                            Grid.RowSpan="2"
+                            Click="BtnScanRecipient_Click"
+                                    Foreground="{Binding Path=LocalizedResources.ApplicationTileTextcolor,
+                Source={StaticResource LocalizedStrings}}"
+                    Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                    BorderBrush="{Binding Path=LocalizedResources.ApplicationTileBordercolor,
+                Source={StaticResource LocalizedStrings}}" 
+                            >
+
+                        <StackPanel Margin="0,0,0,0">
+                            <Image Name="BtnAddressImage2" 
+                        		Height="75" Width="75"   Margin="-15"
+                                   Source="Assets/Pictures/Light/appbar.qr.png"
+                                  
+                                   />
+                        </StackPanel>
+                    </Button>
+                    
+                    <TextBlock Name="TbRecipientText"
+                               Grid.Row="0"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding Path=LocalizedResources.MWSendTo,
+                Source={StaticResource LocalizedStrings}}"
+                               VerticalAlignment="Center" 
+                               FontSize="{Binding Path=LocalizedResources.UITextBoxFontSize,
+                Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBox Name="TbRecipient"
+                             TextWrapping="Wrap"
+                             Grid.Row="0"
+                             Grid.Column="1"
+                             Grid.ColumnSpan="3"
+                             Grid.RowSpan="4"
+                             FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                             ></TextBox>
+                    <TextBlock Name="TbSendTransactionValueText"
+                               Grid.Row="4"
+                               Grid.ColumnSpan="2"
+                               Grid.RowSpan="2"
+                               Text="{Binding Path=LocalizedResources.MWSendAmount,
+                Source={StaticResource LocalizedStrings}}"
+                               VerticalAlignment="Center" 
+                               FontSize="{Binding Path=LocalizedResources.UITextBoxFontSize,
+                Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBox Name="TbSendTransactionValue"
+                             Grid.Row="4"
+                             Grid.Column="2"
+                             Grid.RowSpan="2"
+                             Grid.ColumnSpan="2"
+                             FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                             ></TextBox>
+                    <TextBlock Name="TbSendTransactionMessageText"
+                               Grid.Row="6"
+                               Grid.ColumnSpan="2" 
+                               Grid.RowSpan="2"
+                               Grid.Column="0"
+                               Text="{Binding Path=LocalizedResources.MWSendMessage,
+                Source={StaticResource LocalizedStrings}}"
+                               VerticalAlignment="Center" 
+                               FontSize="{Binding Path=LocalizedResources.UITextBoxFontSize,
+                Source={StaticResource LocalizedStrings}}"></TextBlock>
+                    <TextBox Name="TbSendTransactionMessage"
+                             Grid.Row="6"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Grid.RowSpan="2"
+                             FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                             ></TextBox>
+                    <TextBlock Name="TbSendTransactionFeeText"
+                               Grid.Row="8"
+                               Grid.ColumnSpan="2"
+                               Grid.Column="0"
+                               Grid.RowSpan="2"
+                             
+                               Text="{Binding Path=LocalizedResources.MWSendFee,
+                Source={StaticResource LocalizedStrings}}"
+                               VerticalAlignment="Center" 
+                               FontSize="{Binding Path=LocalizedResources.UITextBoxFontSize,
+                Source={StaticResource LocalizedStrings}}" Margin="0,30,0,24"></TextBlock>
+                    <TextBox Name="TbSendTransactionFee"
+                             Grid.Row="8"
+                             Grid.Column="2"
+                             Grid.ColumnSpan="2"
+                             Grid.RowSpan="2"
+                             FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                             ></TextBox>
+
+                    <Button Name="BtnSend"
+                            Content="{Binding Path=LocalizedResources.MWSendButton,
+                Source={StaticResource LocalizedStrings}}"
+                            Click="BtnSend_Click"
+                            Grid.Row="10"
+                            Grid.RowSpan="2"
+                            Height="100"
+                            Grid.ColumnSpan="4"
+                            Grid.Column="0"
+                            Foreground="{Binding Path=LocalizedResources.ApplicationTileTextcolor,
+                Source={StaticResource LocalizedStrings}}"
+                            Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                            BorderBrush="{Binding Path=LocalizedResources.ApplicationTileBordercolor,
+                Source={StaticResource LocalizedStrings}}" 
+                            FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"></Button>
+                </Grid>
+               
+            </phone:PanoramaItem>
+
+            <!-- TRANSACTIONS -->
+            <phone:PanoramaItem  Header="{Binding Path=LocalizedResources.MWTransactionsTitle, 
+                Source={StaticResource LocalizedStrings}}">
+                <Grid>
+                    <ListBox Name="TransactionList">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Name="spTransactions">
+                                    <StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="155"/>
+                                                <ColumnDefinition Width="80"/>
+                                                <ColumnDefinition Width="155"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition/>
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+
+                                            <TextBlock Text="{Binding Path=PrevAddrTag}"
+                                               Foreground="{Binding Path=TextColor}"
+                                               TextAlignment="Left"
+                                                       
+                                                      Grid.Row="1"
+                                                   >
+                                            </TextBlock>
+                                            <TextBlock Text="{Binding Path=TransactionValue}"
+                                                    Foreground="{Binding Path=TextColor}"
+                                                    TextAlignment="Right"
+                                                    Grid.Row="1"
+                                                    FontSize="25"
+                                                    Grid.Column="2"
+                                                       
+                                                    ></TextBlock>
+                                            <TextBlock
+
+                                                Foreground="{Binding Path=TextColor}"
+                                                    TextAlignment="Right"
+                                                    Grid.Row="1"
+                                                    FontSize="25"
+                                                    Grid.Column="2"
+                                                ></TextBlock>
+
+                                            <Image Source="{Binding Path=IconSource}"
+                                                   Height="40" Width="40"
+                                                   Grid.Row="1"
+                                                   Grid.Column="1"
+                                                   ></Image>
+
+                                            <TextBlock Text="{Binding Path=Address}"
+                                                       Foreground="{Binding Path=TextColor}"
+                                                       TextAlignment="Left"
+                                                       Grid.Row="0" Grid.ColumnSpan="3"
+                                                       Name="TbTransactionPublicHold"
+                                                    Hold="TbTransactionPublicHold_Hold"
+                                                       ></TextBlock>
+
+                                            <TextBlock Grid.Row="3"
+                                                       Grid.Column="1"
+                                                       Grid.ColumnSpan="2"
+                                                       TextAlignment="Right"
+                                                       Text="{Binding Path=UnconfirmedText}"
+                                                       FontWeight="Bold"
+                                                       FontSize="18"
+                                                       Foreground="Red"></TextBlock>
+                                        </Grid>
+
+                                    </StackPanel>
+
+
+                                    <!-- <HyperlinkButton NavigateUri="{Binding Path=Link}" TargetName="_blank" 
+                                                     Content="{Binding Path=LocalizedResources.RSSReadMore, 
+                Source={StaticResource LocalizedStrings}}" ></HyperlinkButton>-->
+
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+
+            </phone:PanoramaItem>
+
+        </phone:Panorama>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>

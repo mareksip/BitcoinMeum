@@ -1,0 +1,176 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="BitcoinMeum.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" 
+          Background="{Binding Path=LocalizedResources.ApplicationBackcolor,
+                Source={StaticResource LocalizedStrings}}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <Image Name="ImgTitle" Source="Assets/Pictures/Logo/logo-blue.png" 
+                        		Height="60" Width="60" HorizontalAlignment="Left"
+                   Margin="12,0"
+                   />
+
+            <TextBlock Text="{Binding Path=LocalizedResources.AboutTitle,
+                       Source={StaticResource LocalizedStrings}}"
+                       Style="{StaticResource PhoneTextNormalStyle}"
+                       Margin="82,-55"
+                       FontSize="35"
+                     
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                       />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="181*"></ColumnDefinition>
+                <ColumnDefinition Width="275*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="180"/>
+                <RowDefinition Height="0*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding Path=LocalizedResources.AboutAuthorText,
+                Source={StaticResource LocalizedStrings}}" 
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1" Name="Author"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                         FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0"
+                       Text="{Binding Path=LocalizedResources.AboutEmailText,
+                Source={StaticResource LocalizedStrings}}"  
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <!--  <TextBlock Grid.Column="1" Grid.Row="1" Name="AuthorEmail">
+                
+            </TextBlock> -->
+            <HyperlinkButton Name="AuthorEmail" Grid.Column="1" Grid.Row="1" 
+                             HorizontalContentAlignment="Left"
+                             NavigateUri="mailto:marek.sip@hotmail.com" 
+                             TargetName="_blank"
+                             Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                             />
+            <TextBlock Grid.Row="2" Grid.Column="0"
+                       Text="{Binding Path=LocalizedResources.AboutVersionText,
+                Source={StaticResource LocalizedStrings}}"  
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <TextBlock Grid.Column="1" Grid.Row="2" Name="Version"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0"
+                       Text="{Binding Path=LocalizedResources.AboutVersionDescriptionText,
+                Source={StaticResource LocalizedStrings}}"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0"
+                       Name="VersionDescription"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <TextBlock Name="DonateAddress" Grid.Row="5" Grid.Column="0"
+                       Text="{Binding Path=LocalizedResources.DonateAddressText,
+                Source={StaticResource LocalizedStrings}}" 
+                       Style="{StaticResource PhoneTextNormalStyle}" 
+                       TextAlignment="Left" Margin="0,0,12,0"
+                       Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            <Grid Grid.Row="6"
+                  Grid.Column="0"
+                  Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Name="DonateAddressTb" 
+                           Text="{Binding Path=LocalizedResources.DonateAddress, Source={StaticResource LocalizedStrings}}" 
+                           Style="{StaticResource PhoneTextNormalStyle}" 
+                           Grid.ColumnSpan="3" 
+                           VerticalAlignment="Center"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           FontStyle="Italic"
+                           Grid.Column="1" Margin="0,0,12,0"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
+        Source={StaticResource LocalizedStrings}}"
+                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
+        Source={StaticResource LocalizedStrings}}"
+                       ></TextBlock>
+            </Grid>
+
+            <Button Name="CopyAddressButton" Grid.Row="7"
+                    Margin="0,0,0,0"
+                    HorizontalAlignment="Center"
+                    Click="CopyAddressButton_Click" 
+                    FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
+                    Content="{Binding Path=LocalizedResources.AboutButtonCopyAddress,
+                Source={StaticResource LocalizedStrings}}"
+                     Foreground="{Binding Path=LocalizedResources.ApplicationTileTextcolor,
+                Source={StaticResource LocalizedStrings}}"
+                    Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                    BorderBrush="{Binding Path=LocalizedResources.ApplicationTileBordercolor,
+                Source={StaticResource LocalizedStrings}}" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                    />
+        </Grid>
+    </Grid>
+
+
+</phone:PhoneApplicationPage>
