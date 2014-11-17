@@ -1,16 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-
-using System.Text;
 using BitcoinMeum.Resources;
-using System.Json;
 using Newtonsoft.Json.Linq;
 
 
@@ -89,11 +83,11 @@ namespace BitcoinMeum
         {
             ApplicationBar = new ApplicationBar();
 
-            ApplicationBarIconButton btnBalance = new ApplicationBarIconButton
-               ();
-            btnBalance.IconUri =
-                new Uri(@"Assets/Pictures/Dark/appbar.refresh.png", UriKind.Relative);
-            btnBalance.Text = AppResources.MWRefreshBalance;
+            var btnBalance = new ApplicationBarIconButton
+            {
+                IconUri = new Uri(@"Assets/Pictures/Dark/appbar.refresh.png", UriKind.Relative),
+                Text = AppResources.MWRefreshBalance
+            };
             btnBalance.Click += refresh_Click;
 
             ApplicationBar.Buttons.Add(btnBalance);

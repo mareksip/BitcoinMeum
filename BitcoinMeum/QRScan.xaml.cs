@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Json;
-using System.Net;
 using System.Windows;
 using Microsoft.Phone.Controls;
 using ZXing.Mobile;

@@ -1,20 +1,12 @@
 ﻿using System.Diagnostics;
 using System.Windows;
 using Microsoft.Phone.Scheduler;
-using Markets.DataAccess;
 using Microsoft.Phone.Shell;
 using System.Linq;
 using System;
-using System.Windows.Controls;
-using System.Windows.Media;
 using System.IO.IsolatedStorage;
-using System.IO;
-using System.Windows.Media.Imaging;
-using System.Windows.Threading;
-using System.Resources;
 using System.Net;
 using System.Json;
-using System.Threading;
 
 
 namespace MarketsTaskAgent

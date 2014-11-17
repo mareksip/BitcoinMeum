@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.IO.IsolatedStorage;
 using System.Json;
 using System.Net;
-using System.Threading;
 
 
 namespace BitcoinMeum
@@ -108,6 +106,7 @@ namespace BitcoinMeum
             public bool Equals(WalletTransactions other)
             {
                 throw new NotImplementedException();
+
             }
         }
     }

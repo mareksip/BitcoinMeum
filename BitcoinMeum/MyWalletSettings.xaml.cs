@@ -19,8 +19,6 @@ namespace BitcoinMeum
 
             LoadIss();
 
-            //TbPrivateKey.Text = "0B59C5FC094186A7C22A581CBACBBCAC07BEEB04BE260F251F2A47271D6224CB";
-            //TbPublicKey.Text = "1PpcWyFD1yiAgja9C8PubU7NbhtiyvNxrR";
         }
 
         private void BuildLocalizedApplicationBar()
@@ -63,7 +61,7 @@ namespace BitcoinMeum
         private void LoadIss()
         {
 
-           if (_appSettings.Contains("MWPublicKey"))
+            if (_appSettings.Contains("MWPublicKey"))
             {
                 TbPublicKey.Text = _appSettings["MWPublicKey"].ToString();
             }
@@ -74,7 +72,6 @@ namespace BitcoinMeum
 
 
         }
-
 
         private void CopyAddressButton_Click(object sender, RoutedEventArgs e)
         {

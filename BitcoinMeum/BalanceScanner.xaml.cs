@@ -45,7 +45,7 @@ namespace BitcoinMeum
         {
             base.OnNavigatedTo(e);
             string msg;
-            //this.Dispatcher.BeginInvoke(() => GetBalance("1HrAm84oEr1eUEojmUwmcYeYdCwnea7QwQ ")); //testovací query
+            //this.Dispatcher.BeginInvoke(() => GetBalance("1HrAm84oEr1eUEojmUwmcYeYdCwnea7QwQ ")); //test query
        
             if (!NavigationContext.QueryString.TryGetValue("msg", out msg)) return;
             this.Dispatcher.BeginInvoke(() => GetBalance(msg));
