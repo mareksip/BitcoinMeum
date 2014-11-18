@@ -1,5 +1,6 @@
-BitcoinMeum
+Bitcoin Meum 
 ===========
+[Download from Windows Phone Store](http://www.windowsphone.com/en-us/store/app/bitcoin-meum/a8d0a491-1ff0-49ea-8679-6ce4d7d682d0)
 
 Welcome to the Bitcoin Meum GitHub page! 
 - Multi-purpose Windows Phone bitcoin application
@@ -36,6 +37,9 @@ Features
 - Support national currencies for Sending payment
 - Notification using background agent for recent input transactions
 - Customizing RSS feed
+- Public/private key validation
+- Generating new wallet
+- Address book
 
 ## Help
 1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB
