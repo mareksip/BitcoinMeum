@@ -38,7 +38,7 @@ Features
 - Customizing RSS feed
 
 ## Help
+1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB
 
-- **1Meum** 86kuhVe4nNeSJo3fgjutqEUnc3bpB
+![donation](http://i.imgur.com/j3HS71B.png)
 
-http://i.imgur.com/j3HS71B.png
