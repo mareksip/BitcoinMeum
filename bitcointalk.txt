@@ -1,22 +1,31 @@
 [center][size=20pt][b]Bitcoin Meum - Windows Phone wallet & multi-purpose app[/b][/size][/center]
 
+Windows Phone Store direct link:
+[url]http://www.windowsphone.com/en-us/store/app/bitcoin-meum/a8d0a491-1ff0-49ea-8679-6ce4d7d682d0[/url]
+
+GitHub
+[url]https://github.com/mareksip/BitcoinMeum[/url]
+
 [size=15pt][b]Short intro[/b][/size]
 
 [size=10pt][b]The intention[/b][/size]
 
-After visiting Paralelni Polis's Bitcoin-only coffee shop with couple of friends and me being the only person to use Windows Phone I had to ask one of guys to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
+After visiting Paralelni Polis's Bitcoin-only coffee shop with couple of friends and me being the only person to use Windows Phone I had to ask one of my friends (who experienced bitcoin payment for first time) to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
 
-[size=10pt][b]Current WP Store[/b][/size]
-Here is the list of apps 
+[size=10pt][b]Current WP Bitcoin wallets[/b][/size]
+
 Kronolab's Bitcoin wallet (test-net only)
 [url]http://www.windowsphone.com/cs-cz/store/app/bitcoin-wallet/6beb6013-ec4c-47e2-80c8-4b5f9dc4a307[/url]
 
 Miguel Rachefort's Bitcoin (probably hidden from store due to Microsoft certification policies OR outdated Blockchain API usage)
 [url]http://www.windowsphone.com/en-us/store/app/bitcoin/ca65fc5b-14f0-4da4-8e39-e2d4b702b2ea[/url] 
+
 [size=10pt][b]Why[/b][/size]
 
 [list]
-[li]Personal user[/li]
+[li]Personal use[/li]
+[li]Community expansion[/li]
+[li]Does Microsoft allow Bitcoin wallets in its Stores? [/li]
 [li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and community cannot expand without atleast minor support here.[/li]
 [/list]
 After several days of coding I come up with open-source Blockchain.info API dependant wallet & multipurpose application that has following features:
@@ -62,6 +71,6 @@ After several days of coding I come up with open-source Blockchain.info API depe
 [li]QR Balance scanner[/li]
 [/list]
 
+[center][size=15pt][b]Would love to hear your feedback, suggestions and of course most important bugs/crashes![/b][/size]
 
-Windows Phone Store direct link:
-[url]http://www.windowsphone.com/en-us/store/app/bitcoin-meum/a8d0a491-1ff0-49ea-8679-6ce4d7d682d0[/url]
+[size=20pt][b]Enjoy![/b][/size][/center]
