@@ -40,6 +40,7 @@ Features
 - Public/private key validation
 - Generating new wallet
 - Address book
+- PIN/2FA security layer for output transactions
 
 ## Help
 1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB
