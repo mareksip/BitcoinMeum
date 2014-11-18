@@ -1,0 +1,81 @@
+-https://bitcointalk.org/index.php?action=post;board=12.0
+
+[center][size=20pt][b]Bitcoin Meum - Windows Phone wallet & multi-purpose app[/b][/size][/center]
+
+Windows Phone Store direct link:
+[url]http://www.windowsphone.com/en-us/store/app/bitcoin-meum/a8d0a491-1ff0-49ea-8679-6ce4d7d682d0[/url]
+
+GitHub
+[url]https://github.com/mareksip/BitcoinMeum[/url]
+
+[size=15pt][b]Short intro[/b][/size]
+
+[size=10pt][b]The intention[/b][/size]
+
+After visiting Paralelni Polis's Bitcoin-only coffee shop with couple of friends and me being the only person to use Windows Phone I had to ask one of my friends (who experienced bitcoin payment for first time) to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
+
+[size=10pt][b]Current WP Bitcoin wallets[/b][/size]
+
+Kronolab's Bitcoin wallet (test-net only)
+[url]http://www.windowsphone.com/cs-cz/store/app/bitcoin-wallet/6beb6013-ec4c-47e2-80c8-4b5f9dc4a307[/url]
+
+Miguel Rachefort's Bitcoin (probably hidden from store due to Microsoft certification policies OR outdated Blockchain API usage)
+[url]http://www.windowsphone.com/en-us/store/app/bitcoin/ca65fc5b-14f0-4da4-8e39-e2d4b702b2ea[/url] 
+
+[size=10pt][b]Why[/b][/size]
+
+[list]
+[li]Personal use[/li]
+[li]Community expansion[/li]
+[li]Does Microsoft allow Bitcoin wallets in its Stores? [i]Nobody really knows [/i][/li]
+[li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and community cannot expand without atleast minor support here.[/li]
+[/list]
+
+[i]Wanna go really mainstream? You need to have support for [b]any device[/b].[/i]
+
+Here is what I come up with after several days of coding Windows Phone Bitcoin wallet & multi-purpose application
+
+[b][size=15pt]Features[/size][/b]
+
+[list]
+[li]Fully open source[/li]
+[li]Blockchain.info API dependant[/li]
+[li]Ad-free[/li]
+[li](sadly) So far the only Windows Phone Bitcoin Wallet that is send and receive compliant[/li]
+[/list]
+
+[b][size=10pt]Wallet[/size][/b]
+
+[list]
+[li]Import Public key for watch-only wallet[/li]
+[li]Import Private key for fully working wallet relying on Blockchain API[/li]
+[li]Balance check[/li]
+[li]Balance to USD[/li]
+[li]QR payment request[/li]
+[li]Balance on live tile[/li]
+[/list]
+
+[b][size=10pt]Market rates[/size][/b]
+[list]
+[li]Bitstamp ticker[/li]
+[li]Btc-e ticker[/li]
+[li]Data on live tile[/li]
+[/list]
+
+[b][size=10pt]Bitcoin news RSS feeds[/size][/b]
+[list]
+[li]r/bitcoin[/li]
+[li]CoinDesk[/li]
+[/list]
+
+[b][size=10pt]Miscellaneous[/size][/b]
+[list]
+[li]QR Balance scanner[/li]
+[/list]
+
+
+Donations: 1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB
+
+[center][size=15pt][b]Would love to hear your feedback, suggestions and of course most important bugs/crashes![/b][/size]
+
+[size=20pt][b]Enjoy![/b][/size][/center]
