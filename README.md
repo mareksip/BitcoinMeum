@@ -44,7 +44,7 @@ Features
 - PIN/2FA security layer for output transactions
 
 ## Help
-1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB
+[1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB](https://blockchain.info/address/1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB)
 
 ![donation](http://i.imgur.com/j3HS71B.png)
 
