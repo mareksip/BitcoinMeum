@@ -1,0 +1,64 @@
+[center][size=20pt][b]Bitcoin Meum - Windows Phone wallet & multi-purpose app[/b][/size][/center]
+
+[size=15pt][b]Short intro[/b][/size]
+
+The intention
+After visiting Paralelni Polis's Bitcoin-only coffee shop with couple of friends and me being the only person to use Windows Phone I had to ask one of guys to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
+
+Current WP Bitcoin Wallet situation
+Here is the list of apps 
+Test-net wallet
+[url]http://www.windowsphone.com/cs-cz/store/app/bitcoin-wallet/6beb6013-ec4c-47e2-80c8-4b5f9dc4a307[/url]
+
+Why 
+[list]
+[li]Personal user[/li]
+[li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and community cannot expand without atleast minor support here.[/li]
+[/list]
+After several days of coding I come up with open-source Blockchain.info API dependant wallet & multipurpose application that has following features:
+
+[center][/center]
+
+
+
+[b][size=15pt]Features[/size][/b]
+
+[list]
+[li]Fully open source[/li]
+[li]Blockchain.info dependant[/li]
+[li]Ad-free[/li]
+[li](sadly) So far the only Windows Phone Bitcoin Wallet that is send and receive compliant[/li]
+[/list]
+
+[b][size=10pt]Wallet[/size][/b]
+
+[list]
+[li]Import Public key for watch-only wallet[/li]
+[li]Import Private key for fully working wallet relying on Blockchain API[/li]
+[li]Balance check[/li]
+[li]Balance to USD[/li]
+[li]QR payment request[/li]
+[li]Balance on live tile[/li]
+[/list]
+
+[b][size=10pt]Market rates[/size][/b]
+[list]
+[li]Bitstamp ticker[/li]
+[li]Btc-e ticker[/li]
+[li]Data on live tile[/li]
+[/list]
+
+[b][size=10pt]Bitcoin news RSS feeds[/size][/b]
+[list]
+[li]r/bitcoin[/li]
+[li]CoinDesk[/li]
+[/list]
+
+[b][size=10pt]Miscellaneous[/size][/b]
+[list]
+[li]QR Balance scanner[/li]
+[/list]
+
+
+Windows Phone Store direct link:
+[url]http://www.windowsphone.com/en-us/store/app/bitcoin-meum/a8d0a491-1ff0-49ea-8679-6ce4d7d682d0[/url]
