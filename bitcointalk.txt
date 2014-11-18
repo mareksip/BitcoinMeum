@@ -2,24 +2,27 @@
 
 [size=15pt][b]Short intro[/b][/size]
 
-The intention
+[size=10pt][b]The intention[/b][/size]
+
 After visiting Paralelni Polis's Bitcoin-only coffee shop with couple of friends and me being the only person to use Windows Phone I had to ask one of guys to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
 
-Current WP Bitcoin Wallet situation
+[size=10pt][b]Current WP Store[/b][/size]
 Here is the list of apps 
-Test-net wallet
+Kronolab's Bitcoin wallet (test-net only)
 [url]http://www.windowsphone.com/cs-cz/store/app/bitcoin-wallet/6beb6013-ec4c-47e2-80c8-4b5f9dc4a307[/url]
 
-Why 
+Miguel Rachefort's Bitcoin (probably hidden from store due to Microsoft certification policies OR outdated Blockchain API usage)
+[url]http://www.windowsphone.com/en-us/store/app/bitcoin/ca65fc5b-14f0-4da4-8e39-e2d4b702b2ea[/url] 
+[size=10pt][b]Why[/b][/size]
+
 [list]
 [li]Personal user[/li]
 [li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and community cannot expand without atleast minor support here.[/li]
 [/list]
 After several days of coding I come up with open-source Blockchain.info API dependant wallet & multipurpose application that has following features:
-
 [center][/center]
 
-
+[i]Wanna go really mainstream? You need to have support for [b]any device[/b].[/i]
 
 [b][size=15pt]Features[/size][/b]
 
