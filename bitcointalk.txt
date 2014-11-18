@@ -25,19 +25,19 @@ Miguel Rachefort's Bitcoin (probably hidden from store due to Microsoft certific
 [list]
 [li]Personal use[/li]
 [li]Community expansion[/li]
-[li]Does Microsoft allow Bitcoin wallets in its Stores? [/li]
+[li]Does Microsoft allow Bitcoin wallets in its Stores? [i]Nobody really knows [/i][/li]
 [li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and community cannot expand without atleast minor support here.[/li]
 [/list]
-After several days of coding I come up with open-source Blockchain.info API dependant wallet & multipurpose application that has following features:
-[center][/center]
 
 [i]Wanna go really mainstream? You need to have support for [b]any device[/b].[/i]
+
+Here is what I come up with after several days of coding Windows Phone Bitcoin wallet & multi-purpose application
 
 [b][size=15pt]Features[/size][/b]
 
 [list]
 [li]Fully open source[/li]
-[li]Blockchain.info dependant[/li]
+[li]Blockchain.info API dependant[/li]
 [li]Ad-free[/li]
 [li](sadly) So far the only Windows Phone Bitcoin Wallet that is send and receive compliant[/li]
 [/list]
