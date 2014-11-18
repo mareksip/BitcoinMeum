@@ -89,12 +89,25 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel>
-                                    <TextBlock Text="{Binding Path=Title}" Foreground="Red" ></TextBlock>
-                                    <TextBlock Text="{Binding Path=Date}" Foreground="GreenYellow" ></TextBlock>
-                                    <TextBlock Text="{Binding Path=Description}" TextWrapping="Wrap"  ></TextBlock>
+                                    <TextBlock Text="{Binding Path=Title}"
+                                               FontSize="25"
+                                               Foreground="#00a6ea"
+                                               TextWrapping="Wrap"></TextBlock>
+                                    <TextBlock Text="{Binding Path=Date}"
+                                               FontSize="20"
+                                               Foreground="white" 
+                                               TextWrapping="Wrap"
+                                               ></TextBlock>
+                                    <TextBlock Text="{Binding Path=Description}" 
+                                               TextWrapping="Wrap"
+                                               Foreground="#757575"
+                                               ></TextBlock>
                                     <HyperlinkButton NavigateUri="{Binding Path=Link}" TargetName="_blank" 
                                                      Content="{Binding Path=LocalizedResources.RSSReadMore, 
-                Source={StaticResource LocalizedStrings}}" ></HyperlinkButton>
+                Source={StaticResource LocalizedStrings}}"
+                                                     Foreground="white"
+                                                    FontStyle="Italic"
+                                                     ></HyperlinkButton>
                                 </StackPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

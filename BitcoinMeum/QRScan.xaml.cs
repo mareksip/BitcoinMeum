@@ -11,7 +11,7 @@ namespace BitcoinMeum
         private MobileBarcodeScanner scanner;
         private int retrieved;
 
-        private string invoker;
+        private string _invoker;
         public QrScan()
         {
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace BitcoinMeum
             string param;
 
             if (!NavigationContext.QueryString.TryGetValue("invoker", out param)) return;
-            invoker = param;
+            _invoker = param;
 
         }
         private void HandleScanResult(ZXing.Result result)
@@ -56,7 +56,7 @@ namespace BitcoinMeum
 
             this.Dispatcher.BeginInvoke(() =>
             {
-                switch (invoker)
+                switch (_invoker)
                 {
                     case "wallet":
                         NavigationService.Navigate(new Uri(String.Format("/MyWallet.xaml?recipientPublic={0}", result.Text), UriKind.Relative));
@@ -66,6 +66,9 @@ namespace BitcoinMeum
                         break;
                     case "walletSettingsPrivate":
                         NavigationService.Navigate(new Uri(String.Format("/MyWalletSettings.xaml?walletPrivate={0}", result.Text), UriKind.Relative));
+                        break;
+                    case "balance":
+                        NavigationService.Navigate(new Uri(String.Format("/BalanceScanner.xaml?msg={0}", result.Text), UriKind.Relative));
                         break;
                 }
 

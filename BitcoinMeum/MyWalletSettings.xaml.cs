@@ -80,12 +80,12 @@ namespace BitcoinMeum
 
         private void BtnScanPublic_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri(String.Format("/QrScan.xaml?invoker={0}", "walletPublic"), UriKind.Relative));
+            NavigationService.Navigate(new Uri(String.Format("/QrScan.xaml?invoker={0}", "walletSettingsPublic"), UriKind.Relative));
         }
 
         private void BtnScanPrivate_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri(String.Format("/QrScan.xaml?invoker={0}", "walletPrivate"), UriKind.Relative));
+            NavigationService.Navigate(new Uri(String.Format("/QrScan.xaml?invoker={0}", "walletSettingsPrivate"), UriKind.Relative));
         }
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {

@@ -1,91 +1,46 @@
 ﻿using System;
 using System.Json;
 using System.Net;
-using System.Windows;
 using Microsoft.Phone.Controls;
-using ZXing.Mobile;
 
 namespace BitcoinMeum
 {
     public partial class BalanceScanner : PhoneApplicationPage
     {
-        private UIElement customOverlayElement = null;
-        private MobileBarcodeScanner scanner;
-        private int retrieved;
+        private int _retrieved;
+
+        string _msg;
         public BalanceScanner()
         {
             InitializeComponent();
-            retrieved = 0;
-            scanner = new MobileBarcodeScanner(this.Dispatcher);
-
-
-            //Get our UIElement from the MainPage.xaml (this) file 
-            // to use as our custom overlay
-            if (customOverlayElement == null)
-            {
-                customOverlayElement = this.customOverlay.Children[0];
-                this.customOverlay.Children.RemoveAt(0);
-            }
-
-            //Wireup our buttons from the custom overlay
-
-
-            //Set our custom overlay and enable it
-            scanner.CustomOverlay = customOverlayElement;
-            scanner.UseCustomOverlay = true;
-
-            //Start scanning
-            scanner.Scan().ContinueWith(t =>
-            {
-                if (t.Result != null)
-                    HandleScanResult(t.Result);
-            });
+            _retrieved = 0;
+            
         }
+
         protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            string msg;
-            //this.Dispatcher.BeginInvoke(() => GetBalance("1HrAm84oEr1eUEojmUwmcYeYdCwnea7QwQ ")); //test query
-       
-            if (!NavigationContext.QueryString.TryGetValue("msg", out msg)) return;
-            this.Dispatcher.BeginInvoke(() => GetBalance(msg));
-       
-            var name = msg;
+           
+            //this.Dispatcher.BeginInvoke(() => GetBalance("1HrAm84oEr1eUEojmUwmcYeYdCwnea7QwQ")); //test query
 
-        }
-        private void HandleScanResult(ZXing.Result result)
-        {
-            string msg = "";
-
-            if (result != null && !string.IsNullOrEmpty(result.Text))
+            if (NavigationContext.QueryString.TryGetValue("msg", out _msg))
             {
-                msg = result.Text;
-                this.Dispatcher.BeginInvoke(() => GetBalance(msg));
-
+                this.Dispatcher.BeginInvoke(() => GetBalance(_msg));
             }
             else
-                msg = "Scanning Canceled!";
-
-            this.Dispatcher.BeginInvoke(() =>
             {
-                //MessageBox.Show(msg);
 
-                //Go back to the main page
-                if (result != null)
-                    NavigationService.Navigate(new Uri(String.Format("/BalanceScanner.xaml?msg={0}",result.Text), UriKind.Relative));
-
-                //Don't allow to navigate back to the scanner with the back button
-                NavigationService.RemoveBackEntry();
-
-            });
+                NavigationService.Navigate(new Uri(String.Format("/QrScan.xaml?invoker={0}", "balance"),
+                    UriKind.Relative));
+            }
         }
-
+      
         public void GetBalance(string publicAdress)
         {
             var client = new WebClient();
             //client.DownloadStringCompleted += TransactionDownload_Completed;
-            retrieved++;
-            TbRetrieved.Text = "Retrieved: " + retrieved.ToString();
+            _retrieved++;
+            TbRetrieved.Text = "Retrieved: " + _retrieved.ToString();
             client.DownloadStringCompleted += (sender, e) =>
             {
                 dynamic result = JsonValue.Parse(e.Result);

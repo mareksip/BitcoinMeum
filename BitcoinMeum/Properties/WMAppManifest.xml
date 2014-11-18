@@ -5,7 +5,7 @@
     <Language code="cs" />
     <Language code="cs-CZ" />
   </Languages>
-  <App xmlns="" ProductID="{2526d721-7c52-4682-88c4-3eed73fd9d37}" Title="Bitcoin Meum" RuntimeType="Silverlight" Version="0.9.4.0" Genre="apps.normal" Author="Marek Sip" Description="Informative application for bitcoiners." Publisher="BitcoinMeum" PublisherID="{f8bb7a3c-5a8f-431e-b05b-72af7cfe70ce}">
+  <App xmlns="" ProductID="{2526d721-7c52-4682-88c4-3eed73fd9d37}" Title="Bitcoin Meum" RuntimeType="Silverlight" Version="0.9.4.1" Genre="apps.normal" Author="Marek Sip" Description="Informative application for bitcoiners." Publisher="BitcoinMeum" PublisherID="{f8bb7a3c-5a8f-431e-b05b-72af7cfe70ce}">
     <IconPath IsRelative="true" IsResource="false">logo-blue-300x300_final.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />

@@ -14,7 +14,6 @@ namespace BitcoinMeum
         public MainPage()
         {
 
-
             InitializeComponent();
 
             BuildLocalizedApplicationBar();
@@ -123,7 +122,7 @@ namespace BitcoinMeum
 
         private void BtnMarkets_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Markets.xaml?msg=" + "test", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Markets.xaml", UriKind.Relative));
         }
     }
 }
