@@ -9,7 +9,7 @@ namespace BitcoinMeum
 {
     public partial class Settings : PhoneApplicationPage
     {
-        IsolatedStorageSettings appSettings = IsolatedStorageSettings.ApplicationSettings;
+        readonly IsolatedStorageSettings _appSettings = IsolatedStorageSettings.ApplicationSettings;
 
         public Settings()
         {
@@ -24,47 +24,47 @@ namespace BitcoinMeum
         {
             ApplicationBar = new ApplicationBar();
 
-            ApplicationBarIconButton btnSaveSettings = new ApplicationBarIconButton
-               ();
-            btnSaveSettings.IconUri =
-                new Uri((@"Assets/Pictures/Dark/appbar.save.png"), UriKind.Relative);
-            btnSaveSettings.Text = AppResources.Save;
+            var btnSaveSettings = new ApplicationBarIconButton
+            {
+                IconUri = new Uri((@"Assets/Pictures/Dark/appbar.save.png"), UriKind.Relative),
+                Text = AppResources.Save
+            };
             btnSaveSettings.Click += save_Click;
             ApplicationBar.Buttons.Add(btnSaveSettings);
         }
 
         private void save_Click(object sender, EventArgs e)
         {
-            if (!appSettings.Contains("LiveTileEnabled"))
+            if (!_appSettings.Contains("LiveTileEnabled"))
             {
-                appSettings.Add("LiveTileEnabled", TileSwitch.IsChecked);
+                _appSettings.Add("LiveTileEnabled", TileSwitch.IsChecked);
             }
             else
             {
-                appSettings["LiveTileEnabled"] = TileSwitch.IsChecked;
+                _appSettings["LiveTileEnabled"] = TileSwitch.IsChecked;
             }
             
-            if (!appSettings.Contains("ShowBalance"))
+            if (!_appSettings.Contains("ShowBalance"))
             {
-                appSettings.Add("ShowBalance", CbShowBalance.IsChecked);
+                _appSettings.Add("ShowBalance", CbShowBalance.IsChecked);
             }
             else
             {
-                appSettings["ShowBalance"] = CbShowBalance.IsChecked;
+                _appSettings["ShowBalance"] = CbShowBalance.IsChecked;
             }
         }
 
         private void LoadSettings()
         {
 
-            if (!appSettings.Contains("LiveTileEnabled"))
+            if (!_appSettings.Contains("LiveTileEnabled"))
             {
                 TileSwitch.IsChecked = false;
                 SpLiveTileSettings.Visibility = Visibility.Collapsed;
             }
             else
             {
-                bool livetileEnabled = Boolean.Parse(appSettings["LiveTileEnabled"].ToString());
+                bool livetileEnabled = Boolean.Parse(_appSettings["LiveTileEnabled"].ToString());
                 TileSwitch.IsChecked = livetileEnabled;
                 if (livetileEnabled == true) {
                     SpLiveTileSettings.Visibility = Visibility.Visible;
@@ -76,14 +76,14 @@ namespace BitcoinMeum
                
             }
 
-            if (!appSettings.Contains("ShowBalance"))
+            if (!_appSettings.Contains("ShowBalance"))
             {
                 CbShowBalance.IsChecked = false;
               
             }
             else
             {
-                bool livetileEnabled = Boolean.Parse(appSettings["ShowBalance"].ToString());
+                bool livetileEnabled = Boolean.Parse(_appSettings["ShowBalance"].ToString());
                 CbShowBalance.IsChecked = livetileEnabled;
              }
         }
@@ -93,9 +93,7 @@ namespace BitcoinMeum
                 
             SpLiveTileSettings.Visibility = Visibility.Collapsed;
            
-           
         }
-
 
         private void tileSwitch_Checked(object sender, RoutedEventArgs e)
         {
