@@ -1,4 +1,4 @@
-https://bitcointalk.org/index.php?action=post;board=12.0
+-https://bitcointalk.org/index.php?action=post;board=12.0
 
 [center][size=20pt][b]Bitcoin Meum - Windows Phone wallet & multi-purpose app[/b][/size][/center]
 
@@ -72,6 +72,9 @@ Here is what I come up with after several days of coding Windows Phone Bitcoin w
 [list]
 [li]QR Balance scanner[/li]
 [/list]
+
+
+Donations: 1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB
 
 [center][size=15pt][b]Would love to hear your feedback, suggestions and of course most important bugs/crashes![/b][/size]
 
