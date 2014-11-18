@@ -5,7 +5,8 @@ Bitcoin Meum
 Welcome to the Bitcoin Meum GitHub page! 
 - Multi-purpose Windows Phone bitcoin application
 - Fully open source
-- Blockchain.info dependant
+- [Blockchain.info](https://blockchain.info/) dependant
+- Ad-free
 - (sadly) So far the only **Windows Phone Bitcoin Wallet** that is _send_ and _receive_ compliant !
 
 Features
