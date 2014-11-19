@@ -1,0 +1,2 @@
+1) Optimize size of response from server on QR Balance scan: https://github.com/lirazsiri/blockexplorer/blob/4921be06fff6fd518951fc50a60220fda65ae6c9/htdocs/templates/stats/home.tpl
+2) Customizable RSS feeds
