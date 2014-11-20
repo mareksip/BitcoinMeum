@@ -12,14 +12,15 @@ GitHub
 
 [size=10pt][b]The intention[/b][/size]
 
-After visiting Paralelni Polis's Bitcoin-only coffee shop with couple of friends and me being the only person to use Windows Phone I had to ask one of my friends (who experienced bitcoin payment for first time) to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
+After visiting Paralelni Polis's Bitcoin-only coffee bar with couple of friends and me being the only person to use Windows Phone I had to ask one of my friends (who experienced bitcoin payment for first time) to buy drinks for me as there was no Bitcoin Wallet in Windows Phone Store.
+And that made me feel really weird.
 
 [size=10pt][b]Current WP Bitcoin wallets[/b][/size]
 
 Kronolab's Bitcoin wallet (test-net only)
 [url]http://www.windowsphone.com/cs-cz/store/app/bitcoin-wallet/6beb6013-ec4c-47e2-80c8-4b5f9dc4a307[/url]
 
-Miguel Rachefort's Bitcoin (probably hidden from store due to Microsoft certification policies OR outdated Blockchain API usage)
+Miguel Rachefort's Bitcoin (hidden from store due to Microsoft certification policies OR outdated Blockchain API usage)
 [url]http://www.windowsphone.com/en-us/store/app/bitcoin/ca65fc5b-14f0-4da4-8e39-e2d4b702b2ea[/url] 
 
 [size=10pt][b]Why[/b][/size]
@@ -28,10 +29,8 @@ Miguel Rachefort's Bitcoin (probably hidden from store due to Microsoft certific
 [li]Personal use[/li]
 [li]Community expansion[/li]
 [li]Does Microsoft allow Bitcoin wallets in its Stores? [i]Nobody really knows [/i][/li]
-[li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and community cannot expand without atleast minor support here.[/li]
+[li]Windows Phone has roughly above 3% market share of Smartphone OS. It is uncomparable to Android's 80% but it is still large portion of cell phones running this OS and bitcoin should be easily available to anyone no matter what device they use.[/li]
 [/list]
-
-[i]Wanna go really mainstream? You need to have support for [b]any device[/b].[/i]
 
 Here is what I come up with after several days of coding Windows Phone Bitcoin wallet & multi-purpose application
 
@@ -48,7 +47,7 @@ Here is what I come up with after several days of coding Windows Phone Bitcoin w
 
 [list]
 [li]Import Public key for watch-only wallet[/li]
-[li]Import Private key for fully working wallet relying on Blockchain API[/li]
+[li]Import Private key for fully working light-wallet relying on Blockchain API !please mind that Private key is always exposed in URL when API for output transaction is made! [/li]
 [li]Balance check[/li]
 [li]Balance to USD[/li]
 [li]QR payment request[/li]
