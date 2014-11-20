@@ -1,3 +1,11 @@
+GitHub Application version 9.4.1.0. was <b>REJECTED</b> in store due to Microsoft's Windows and Windows Phone Store policy No. 10.8.2. 
+
+Please go to [BitcoinMeum/Docs](https://github.com/mareksip/BitcoinMeum/tree/master/Docs) for Store Support chat transcript, App submission statements.
+
+![10.8.2.](http://i.imgur.com/Ssq9r7c.png)
+
+[Policy source](http://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx)
+
 Bitcoin Meum 
 ===========
 [Download from Windows Phone Store](http://www.windowsphone.com/en-us/store/app/bitcoin-meum/a8d0a491-1ff0-49ea-8679-6ce4d7d682d0)
