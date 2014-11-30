@@ -8,7 +8,7 @@ Welcome to the Bitcoin Meum GitHub page!
 - Fully open source
 - [Blockchain.info](https://blockchain.info/) dependant
 - Ad-free
-- (sadly) So far the only **Windows Phone Bitcoin Wallet** that is _send_ and _receive_ compliant !
+- So far the only **Windows Phone Bitcoin Wallet** that is _send_ and _receive_ compliant
 
 Features
 ===========
