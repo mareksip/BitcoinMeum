@@ -1,10 +1,3 @@
-GitHub Application version 9.4.1.0. was <b>REJECTED</b> in store due to Microsoft's Windows and Windows Phone Store policy No. 10.8.2. 
-
-Please go to [BitcoinMeum/Docs](https://github.com/mareksip/BitcoinMeum/tree/master/Docs) for Store Support chat transcript, App submission statements.
-
-![10.8.2.](http://i.imgur.com/Ssq9r7c.png)
-
-[Policy source](http://msdn.microsoft.com/en-us/library/windows/apps/dn764944.aspx)
 
 Bitcoin Meum 
 ===========
@@ -15,7 +8,7 @@ Welcome to the Bitcoin Meum GitHub page!
 - Fully open source
 - [Blockchain.info](https://blockchain.info/) dependant
 - Ad-free
-- (sadly) So far the only **Windows Phone Bitcoin Wallet** that is _send_ and _receive_ compliant !
+- So far the only **Windows Phone Bitcoin Wallet** that is _send_ and _receive_ compliant
 
 Features
 ===========
