@@ -8,6 +8,7 @@ using BitcoinMeum.Resources;
 using System.IO.IsolatedStorage;
 using ZXing;
 using System.Windows.Media.Imaging;
+using Newtonsoft.Json.Linq;
 using System.Json;
 
 namespace BitcoinMeum
@@ -35,11 +36,15 @@ namespace BitcoinMeum
         private void ParsePublicKey()
         {
             if (!_appSettings.Contains("MWPublicKey")) return;
+            
             var publicKey = _appSettings["MWPublicKey"].ToString();
-            var partOne = publicKey.Substring(0, 5);
-            var partTwo = publicKey.Substring(5, publicKey.Length - 8);
-            var partThree = publicKey.Substring(publicKey.Length - 4, 4);
-            TbPublicFirstPart.Text = partOne + " . . . " + partThree;
+            if(publicKey.Length>25)
+            {
+                var partOne = publicKey.Substring(0, 5);
+                //var partTwo = publicKey.Substring(5, publicKey.Length - 8);
+                var partThree = publicKey.Substring(publicKey.Length - 4, 4);
+                TbPublicFirstPart.Text = partOne + " . . . " + partThree;
+            }
         }
 
         private void CountUsdBalance()
@@ -89,23 +94,16 @@ namespace BitcoinMeum
 
             try
             {
-                dynamic result = JsonValue.Parse(e.Result);
+                dynamic result = JObject.Parse(e.Result);
                 if (result != null)
-                    foreach (var usd in result["USD"])
-                    {
-                        switch ((string)usd.Key)
-                        {
-                            case "last":
-                                _lastUsd = usd.Value.ToString().Replace("\"", "");
-                                break;
-                        }
-
-                    }
+                {
+                    _lastUsd = result["USD"]["last"].ToString();
+                }
 
             }
             catch (Exception)
             {
-
+                MessageBox.Show(AppResources.BalanceRefreshFailed);
             }
         }
 
@@ -118,7 +116,7 @@ namespace BitcoinMeum
             }
             else
             {
-                MessageBox.Show(AppResources.BalanceRefreshFailed);
+                MessageBox.Show(AppResources.CantCreateQr);
             }
         }
         private static WriteableBitmap GenerateQrCode(string publicKey, string amount, string message)
@@ -143,7 +141,7 @@ namespace BitcoinMeum
             if (float.TryParse(amount, out valueBtc))
             {
                 //float valueSatoshi = valueBtc * 100000000;
-                string transactionString = publicKey + "?amount=" + valueBtc + "&message=" + message;
+                var transactionString = publicKey + "?amount=" + valueBtc + "&message=" + message;
 
                 barcodeImage = writer.Write(transactionString);
             }
@@ -185,7 +183,7 @@ namespace BitcoinMeum
         {
             try
             {
-                dynamic result = JsonValue.Parse(e.Result);
+                dynamic result = JsonObject.Parse(e.Result);
                 if (result != null)
                 {
                     var tempTransactionCount = result["n_tx"].ToString();
@@ -421,7 +419,7 @@ namespace BitcoinMeum
 
             GetBlockchainBitstampRate();
             BlockchainDetails();
-
+            CountUsdBalance();
         }
 
         private void walletSettingsAppBar_Click(object sender, EventArgs e)
@@ -437,7 +435,7 @@ namespace BitcoinMeum
 
         private void TbTransactionPublicHold_Hold(object sender, System.Windows.Input.GestureEventArgs e)
         {
-
+            //TODO: copy transaction details on HOLD
         }
 
         private void BtnSend_Click(object sender, RoutedEventArgs e)
@@ -509,7 +507,7 @@ namespace BitcoinMeum
         }
         private static void SendDownload_Completed(object sender, DownloadStringCompletedEventArgs e)
         {
-            dynamic result = JsonValue.Parse(e.Result);
+            dynamic result = JObject.Parse(e.Result);
             if (result != null)
             {
                 var msg = "";
@@ -534,7 +532,7 @@ namespace BitcoinMeum
             if (!string.IsNullOrEmpty(recipientPublic))
             {
                 TbRecipient.Text = param;
-                panorama.DefaultItem = panorama.Items[2];
+                Panorama.DefaultItem = Panorama.Items[2];
 
             }
 

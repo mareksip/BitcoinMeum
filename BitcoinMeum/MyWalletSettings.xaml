@@ -176,7 +176,8 @@
                             Click="CopyAddressButton_Click" 
                     Content="{Binding Path=LocalizedResources.AboutButtonCopyAddress,
                 Source={StaticResource LocalizedStrings}}"
-                    
+                    FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
+                Source={StaticResource LocalizedStrings}}"
                      Foreground="{Binding Path=LocalizedResources.ApplicationTileTextcolor,
                 Source={StaticResource LocalizedStrings}}"
                     Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,

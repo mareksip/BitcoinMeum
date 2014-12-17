@@ -182,8 +182,10 @@
                     </Button>
 
                     <Button
-                        Grid.Row="2" Grid.Column="0" Name="BtnWalletGenerator"
-                    
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Name="BtnBlockchainData"
+                        Click="BtnBlockchainData_Click"
                     Foreground="{Binding Path=LocalizedResources.ApplicationTileTextcolor,
                 Source={StaticResource LocalizedStrings}}"
                     Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
@@ -193,7 +195,19 @@
                     FontSize="25"
                     
                     >
-                    Coming soon.
+                        <StackPanel>
+                           <Image Name="ImgBlockchain" Source="Assets/Pictures/blockchain.png" 
+                        		Height="100" Width="100" />
+                        <TextBlock 
+                        Text="{Binding Path=LocalizedResources.BlockchainDataTitle,
+                Source={StaticResource LocalizedStrings}}"
+                        TextAlignment="Center"
+                        Foreground="{Binding Path=LocalizedResources.ApplicationPlainTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                        Margin="0,0"
+                        FontSize="30"
+                        ></TextBlock>
+                        </StackPanel>
                     </Button>
 
 

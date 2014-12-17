@@ -24,7 +24,13 @@
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
+        <StackPanel x:Name="TitlePanel"
+                    Grid.Row="0"
+                    Margin="12,17,0,28"
+                    >
             <Image Name="ImgTitle" Source="Assets/Pictures/Logo/logo-blue.png" 
                         		Height="60" Width="60" HorizontalAlignment="Left"
                    Margin="12,0"
@@ -39,7 +45,7 @@
                 Source={StaticResource LocalizedStrings}}"
                        />
         </StackPanel>
-            <Grid Grid.Row="1" Grid.RowSpan="3"
+            <Grid Grid.Row="1" Grid.RowSpan="3" Margin="20,0"
                    
                    >
                 <Grid.ColumnDefinitions>
@@ -60,18 +66,28 @@
                     <RowDefinition />
                     <RowDefinition />
                 </Grid.RowDefinitions>
-            <TextBlock Name="TbRetrieved" Grid.Row="7"
+            <TextBlock Name="TbAddress" Grid.Row="0"
                        Grid.ColumnSpan="4"
+                       FontSize="20"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       Foreground="#00a6ea"
+                       FontWeight="Bold"
                        ></TextBlock>
+            <TextBlock Name="TbRetrieved" Grid.Row="7"
+                       Grid.ColumnSpan="4" Grid.Column="0"></TextBlock>
                 <TextBlock Name="TbWalletBalanceText"
                                Text="{Binding Path=LocalizedResources.WalletBalanceText, 
                 Source={StaticResource LocalizedStrings}}"
                                FontSize="{Binding Path=LocalizedResources.UIRegularTextSize,
                 Source={StaticResource LocalizedStrings}}"
+                           FontWeight="Bold"
                                Grid.Row="4"
                                Grid.ColumnSpan="2" Grid.Column="0"
                                Grid.RowSpan="2"
                                VerticalAlignment="Center"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
                                >
 
                 </TextBlock>
@@ -83,6 +99,9 @@
                                Grid.ColumnSpan="2"
                                Grid.Column="2"
                                VerticalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
 
                 <TextBlock Name="TbWalletBalanceUsdText"
@@ -94,6 +113,9 @@
                                Grid.ColumnSpan="2" Grid.Column="0"
                                Grid.RowSpan="3"
                                VerticalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
                                >
 
                 </TextBlock>
@@ -105,14 +127,28 @@
                                Grid.RowSpan="3"
                                Grid.Column="2"
                                VerticalAlignment="Center"
+                           FontWeight="Bold"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
+            <ProgressBar Width="500" 
+                                 Height="20" 
+                                 Grid.Row="7"
+                                 Grid.ColumnSpan="4" Grid.Column="0"
+                         IsIndeterminate="True"       
+                                 Name="ProgressBar" 
+                                 Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
+                         ></ProgressBar>
 
-                <TextBlock Name="TbTransactionCountText"
+            <TextBlock Name="TbTransactionCountText"
                                Text="{Binding Path=LocalizedResources.WalletTransactionCountText, 
                 Source={StaticResource LocalizedStrings}}"
                                Grid.Row="1"
                                Grid.ColumnSpan="2" Grid.Column="0"
                                FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
                 Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
                 <TextBlock Name="TbTransactionCount"
@@ -120,6 +156,8 @@
                                Grid.Column="2"
                                Grid.ColumnSpan="2"
                                FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
                 Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
                 <TextBlock Name="TbTotalReceivedText"
@@ -129,12 +167,16 @@
                                Grid.ColumnSpan="2" Grid.Column="0"
                                FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
                 Source={StaticResource LocalizedStrings}}"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
                 <TextBlock Name="TbTotalReceived"
                                Grid.Row="2"
                                Grid.ColumnSpan="2"
                                Grid.Column="2"
                                FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
                 Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
                 <TextBlock Name="TbTotalSentText"
@@ -144,12 +186,16 @@
                                Grid.ColumnSpan="2" Grid.Column="0"
                                FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
                 Source={StaticResource LocalizedStrings}}"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
+                Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
                 <TextBlock Name="TbTotalSent"
                                Grid.Row="3"
                                Grid.ColumnSpan="2"
                                Grid.Column="2"
                                FontSize="{Binding Path=LocalizedResources.UISmallTextSize,
+                Source={StaticResource LocalizedStrings}}"
+                           Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
                 Source={StaticResource LocalizedStrings}}"
                                ></TextBlock>
 

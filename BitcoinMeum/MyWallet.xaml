@@ -41,7 +41,7 @@
         </StackPanel>
 
         <phone:Panorama 
-            Name="panorama"
+            Name="Panorama"
                 Margin="20,70,0,0"
                 Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
                 Source={StaticResource LocalizedStrings}}"

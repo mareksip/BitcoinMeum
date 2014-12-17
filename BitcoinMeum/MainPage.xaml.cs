@@ -124,5 +124,10 @@ namespace BitcoinMeum
         {
             NavigationService.Navigate(new Uri("/Markets.xaml", UriKind.Relative));
         }
+
+        private void BtnBlockchainData_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/BlockchainInfo.xaml", UriKind.Relative));        
+        }
     }
 }

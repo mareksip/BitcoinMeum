@@ -9,6 +9,9 @@
 //------------------------------------------------------------------------------
 
 namespace BitcoinMeum.Resources {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -76,7 +79,16 @@ namespace BitcoinMeum.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Contact:.
+        ///   Looks up a localized string similar to Current version contains new feature for Blockchain details. Furthermore  Balance scanner page was improved..
+        /// </summary>
+        public static string AboutDescription {
+            get {
+                return ResourceManager.GetString("AboutDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact.
         /// </summary>
         public static string AboutEmailText {
             get {
@@ -94,7 +106,7 @@ namespace BitcoinMeum.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Description:.
+        ///   Looks up a localized string similar to Description.
         /// </summary>
         public static string AboutVersionDescriptionText {
             get {
@@ -256,6 +268,24 @@ namespace BitcoinMeum.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Block info.
+        /// </summary>
+        public static string BlockchainDataTitle {
+            get {
+                return ResourceManager.GetString("BlockchainDataTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Can not create QR code..
+        /// </summary>
+        public static string CantCreateQr {
+            get {
+                return ResourceManager.GetString("CantCreateQr", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to CoinDesk.
         /// </summary>
         public static string CoinDesk {
@@ -265,7 +295,7 @@ namespace BitcoinMeum.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 1KAqjkCjQiWYnpjmNWWb7zsDGJEFLVbUDQ.
+        ///   Looks up a localized string similar to 1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB.
         /// </summary>
         public static string DonateAddress {
             get {
@@ -274,7 +304,7 @@ namespace BitcoinMeum.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Donation:.
+        ///   Looks up a localized string similar to Donation.
         /// </summary>
         public static string DonateAddressText {
             get {

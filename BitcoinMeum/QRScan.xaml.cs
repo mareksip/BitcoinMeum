@@ -3,6 +3,7 @@ using System.Windows;
 using Microsoft.Phone.Controls;
 using ZXing.Mobile;
 
+
 namespace BitcoinMeum
 {
     public partial class QrScan : PhoneApplicationPage

@@ -141,22 +141,22 @@
     <value>Copy to clipboard</value>
   </data>
   <data name="AboutEmailText" xml:space="preserve">
-    <value>Contact:</value>
+    <value>Contact</value>
   </data>
   <data name="AboutTitle" xml:space="preserve">
     <value>ABOUT</value>
   </data>
   <data name="AboutVersionDescriptionText" xml:space="preserve">
-    <value>Description:</value>
+    <value>Description</value>
   </data>
   <data name="AboutVersionText" xml:space="preserve">
     <value>Version:</value>
   </data>
   <data name="DonateAddress" xml:space="preserve">
-    <value>1KAqjkCjQiWYnpjmNWWb7zsDGJEFLVbUDQ</value>
+    <value>1Meum86kuhVe4nNeSJo3fgjutqEUnc3bpB</value>
   </data>
   <data name="DonateAddressText" xml:space="preserve">
-    <value>Donation:</value>
+    <value>Donation</value>
   </data>
   <data name="HomeTitle" xml:space="preserve">
     <value>HOME</value>
@@ -414,5 +414,14 @@ As a result you can keep track of wallet transactions, current balance and recei
   </data>
   <data name="PrivateKeyWalletDescription" xml:space="preserve">
     <value>Entering valid Private key enables user option to send bitcoins via Blockchain API.</value>
+  </data>
+  <data name="CantCreateQr" xml:space="preserve">
+    <value>Can not create QR code.</value>
+  </data>
+  <data name="AboutDescription" xml:space="preserve">
+    <value>Current version contains new feature for Blockchain details. Furthermore  Balance scanner page was improved.</value>
+  </data>
+  <data name="BlockchainDataTitle" xml:space="preserve">
+    <value>Block info</value>
   </data>
 </root>

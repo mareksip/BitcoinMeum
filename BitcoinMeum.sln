@@ -1,13 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitcoinMeum", "BitcoinMeum\BitcoinMeum.csproj", "{2526D721-7C52-4682-88C4-3EED73FD9D37}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markets.DataAccess", "Markets.DataAccess\Markets.DataAccess.csproj", "{0FA5F3EF-902A-4F67-83A1-DB0FACACC517}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarketsTaskAgent", "MarketsTaskAgent\MarketsTaskAgent.csproj", "{DFFA116C-077A-4B75-A4AB-0D1C4F47F0F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{1B784AE8-C767-4C2D-9250-565D46C16507}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

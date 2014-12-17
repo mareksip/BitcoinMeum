@@ -51,11 +51,12 @@
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="180"/>
                 <RowDefinition Height="50"/>
-                <RowDefinition Height="180"/>
-                <RowDefinition Height="0*"/>
-                <RowDefinition/>
+                <RowDefinition Height="161"/>
+                <RowDefinition Height="47"/>
+                <RowDefinition Height="148"/>
+                <RowDefinition Height="54*"/>
+                <RowDefinition Height="35*"/>
             </Grid.RowDefinitions>
             <TextBlock Text="{Binding Path=LocalizedResources.AboutAuthorText,
                 Source={StaticResource LocalizedStrings}}" 
@@ -81,14 +82,21 @@
             <!--  <TextBlock Grid.Column="1" Grid.Row="1" Name="AuthorEmail">
                 
             </TextBlock> -->
-            <HyperlinkButton Name="AuthorEmail" Grid.Column="1" Grid.Row="1" 
+            <Grid Grid.Row="2" Grid.Column="0"
+                  Grid.ColumnSpan="2">
+
+                <HyperlinkButton Name="AuthorEmail" Grid.Column="0" Grid.ColumnSpan="4"  
                              HorizontalContentAlignment="Left"
                              NavigateUri="mailto:marek.sip@hotmail.com" 
                              TargetName="_blank"
+                             FontSize="30"
+                             HorizontalAlignment="Center"
                              Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
-        Source={StaticResource LocalizedStrings}}"
+        Source={StaticResource LocalizedStrings}}" 
                              />
-            <TextBlock Grid.Row="2" Grid.Column="0"
+            </Grid>
+
+            <TextBlock Grid.Row="3" Grid.Column="0"
                        Text="{Binding Path=LocalizedResources.AboutVersionText,
                 Source={StaticResource LocalizedStrings}}"  
                        Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
@@ -96,13 +104,13 @@
                        FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
         Source={StaticResource LocalizedStrings}}"
                        ></TextBlock>
-            <TextBlock Grid.Column="1" Grid.Row="2" Name="Version"
+            <TextBlock Grid.Column="1" Grid.Row="3" Name="Version"
                        Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
         Source={StaticResource LocalizedStrings}}"
                        FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
         Source={StaticResource LocalizedStrings}}"
                        ></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="0"
+            <TextBlock Grid.Row="4" Grid.Column="0"
                        Text="{Binding Path=LocalizedResources.AboutVersionDescriptionText,
                 Source={StaticResource LocalizedStrings}}"
                        Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
@@ -110,14 +118,15 @@
                        FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
         Source={StaticResource LocalizedStrings}}"
                        ></TextBlock>
-            <TextBlock Grid.Row="4" Grid.ColumnSpan="2" Grid.Column="0"
+            <TextBlock Grid.Row="5" Grid.ColumnSpan="2" Grid.Column="0"
                        Name="VersionDescription"
+                       TextWrapping="Wrap"
+                       
                        Foreground="{Binding Path=LocalizedResources.ApplicationTitleTextColor, 
         Source={StaticResource LocalizedStrings}}"
-                       FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
-        Source={StaticResource LocalizedStrings}}"
+                       FontSize="25"
                        ></TextBlock>
-            <TextBlock Name="DonateAddress" Grid.Row="5" Grid.Column="0"
+            <TextBlock Name="DonateAddress" Grid.Row="6" Grid.Column="0"
                        Text="{Binding Path=LocalizedResources.DonateAddressText,
                 Source={StaticResource LocalizedStrings}}" 
                        Style="{StaticResource PhoneTextNormalStyle}" 
@@ -127,7 +136,7 @@
                        FontSize="{Binding Path=LocalizedResources.UIRegularTextSize, 
         Source={StaticResource LocalizedStrings}}"
                        ></TextBlock>
-            <Grid Grid.Row="6"
+            <Grid Grid.Row="7"
                   Grid.Column="0"
                   Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
@@ -154,8 +163,8 @@
                        ></TextBlock>
             </Grid>
 
-            <Button Name="CopyAddressButton" Grid.Row="7"
-                    Margin="0,0,0,0"
+            <Button Name="CopyAddressButton" Grid.Row="8"
+                    Margin="61,0"
                     HorizontalAlignment="Center"
                     Click="CopyAddressButton_Click" 
                     FontSize="{Binding Path=LocalizedResources.UIButtonFontSize,
@@ -167,7 +176,7 @@
                     Background="{Binding Path=LocalizedResources.ApplicationTitleTextColor,
                 Source={StaticResource LocalizedStrings}}"
                     BorderBrush="{Binding Path=LocalizedResources.ApplicationTileBordercolor,
-                Source={StaticResource LocalizedStrings}}" Grid.RowSpan="2" Grid.ColumnSpan="2"
+                Source={StaticResource LocalizedStrings}}" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="334"
                     />
         </Grid>
     </Grid>

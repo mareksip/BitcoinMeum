@@ -56,6 +56,8 @@ namespace BitcoinMeum
                 _appSettings["MWPrivateKey"] = TbPrivateKey.Text;
             }
 
+            NavigationService.Navigate(new Uri(String.Format("/MyWallet.xaml"), UriKind.Relative));
+        
         }
 
         private void LoadIss()
@@ -70,12 +72,12 @@ namespace BitcoinMeum
                 TbPrivateKey.Text = _appSettings["MWPrivateKey"].ToString();
             }
 
-
+        
         }
 
         private void CopyAddressButton_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(AppResources.DonateAddress);
+            Clipboard.SetText(TbPublicKey.Text);
         }
 
         private void BtnScanPublic_Click(object sender, RoutedEventArgs e)

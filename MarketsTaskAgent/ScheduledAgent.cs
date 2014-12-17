@@ -13,7 +13,7 @@ namespace MarketsTaskAgent
 {
     public class ScheduledAgent : ScheduledTaskAgent
     {
-        IsolatedStorageSettings appSettings = IsolatedStorageSettings.ApplicationSettings;
+        readonly IsolatedStorageSettings _appSettings = IsolatedStorageSettings.ApplicationSettings;
         /// <remarks>
         /// ScheduledAgent constructor, initializes the UnhandledException handler
         /// </remarks>
@@ -59,26 +59,26 @@ namespace MarketsTaskAgent
                 string publicKey = "";
                 string balance = "";
 
-                bool containsKey = appSettings.Contains("LiveTileEnabled");
-                if (containsKey == true)
-                    liveTileEnabled = appSettings["LiveTileEnabled"].ToString();
+                bool containsTileKey = _appSettings.Contains("LiveTileEnabled");
+                if (containsTileKey)
+                    liveTileEnabled = _appSettings["LiveTileEnabled"].ToString();
 
-                bool containsKeyShowBalance = appSettings.Contains("ShowBalance");
-                if (containsKeyShowBalance == true)
-                    showBalanceInstead = appSettings["ShowBalance"].ToString();
+                bool containsKeyShowBalance = _appSettings.Contains("ShowBalance");
+                if (containsKeyShowBalance)
+                    showBalanceInstead = _appSettings["ShowBalance"].ToString();
 
-                bool containsKeyPublic = appSettings.Contains("MWPublicKey");
-                if (containsKey)
-                    publicKey = appSettings["MWPublicKey"].ToString();
+                bool containsKeyPublic = _appSettings.Contains("MWPublicKey");
+                if (containsKeyPublic)
+                    publicKey = _appSettings["MWPublicKey"].ToString();
 
 
-                FlipTileData dt = new FlipTileData();
-                if (containsKey == true)
+                var dt = new FlipTileData();
+                if (containsTileKey)
                 {
                     if (liveTileEnabled == "True")
                     {
 
-                        WebClient client = new WebClient();
+                        var client = new WebClient();
 
                         client.DownloadStringCompleted += (sender, e) =>
                         {
@@ -96,17 +96,17 @@ namespace MarketsTaskAgent
                         if (showBalanceInstead == "True" && publicKey != "")
                         {
 
-                            publicKey = appSettings["MWPublicKey"].ToString();
+                            publicKey = _appSettings["MWPublicKey"].ToString();
 
 
-                            WebClient client2 = new WebClient();
+                            var client2 = new WebClient();
                             client2.DownloadStringCompleted += (sender, e) =>
                             {
                                 balance = Markets.DataAccess.MyWallet.BitcoinParse(e.Result);
 
                             };
 
-                            client2.DownloadStringAsync(new Uri("https://blockchain.info/q/addressbalance/" + appSettings["MWPublicKey"].ToString() + "?format=json"));
+                            client2.DownloadStringAsync(new Uri("https://blockchain.info/q/addressbalance/" + _appSettings["MWPublicKey"].ToString() + "?format=json"));
                             System.Threading.Thread.Sleep(5000);
 
                          }
@@ -114,7 +114,7 @@ namespace MarketsTaskAgent
 
                 }
 
-                ShellTile appTile = ShellTile.ActiveTiles.First();
+                var appTile = ShellTile.ActiveTiles.First();
                 dt.Title = "Last: $" + tileTitle;
                 if (showBalanceInstead == "True" && liveTileEnabled == "True")
                 {
