@@ -5,7 +5,7 @@ using Microsoft.Phone.Shell;
 using BitcoinMeum.Resources;
 using System.IO.IsolatedStorage;
 using Microsoft.Phone.Scheduler;
-
+ 
 namespace BitcoinMeum
 {
     public partial class MainPage : PhoneApplicationPage
